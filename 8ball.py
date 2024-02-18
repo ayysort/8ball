@@ -1,4 +1,5 @@
 import random
+import time
 print(" ")
 print("You picked up an 8 ball")
 
@@ -6,35 +7,16 @@ def roll():
   print(" ")
   q = input('Ask your question: ')
 
-  num = random.randint(1, 9)
-
-  if num == 1:
-    print('Yes - definitely.')
-    another()
-  elif num == 2:
-    print('It is decidedly so.')
-    another()
-  elif num == 3:
-    print('Without a doubt.')
-    another()
-  elif num == 4:
-    print('Reply hazy, try again.')
-    another()
-  elif num == 5:
-    print('Ask again later.')
-    another()
-  elif num == 6:
-    print('Better not tell you now.')
-    another()
-  elif num == 7:
-    print('My sources say no.')
-    another()
-  elif num == 8:
-    print('Outlook not so good.')
-    another()
-  elif num == 9:
-    print('Very doubtful.')
-    another()
+  answer = random.choice(['"It is certain"', '"Yes - definitely"', '"It is decidedly so"', '"Without a doubt"', '"You may rely on it"', 
+                          '"As I see it, yes"', '"Most likely"', '"Outlook good"', '"Yes"', '"Signs point to yes"', '"Reply hazy, try again"', 
+                          '"Ask Again later"', '"Better no tell you now"', '"Cannot predict now"', '"Concentrate and ask again"', 
+                          '"Do not count on it"', '"My reply is no"', '"My sources say no"', '"Outlook not so good"', '"Very doubtful"'])
+  
+  print('You give it a shake...')
+  time.sleep(2)
+  print(' ')
+  print(answer)
+  another()
 
 def another():
   while True:
